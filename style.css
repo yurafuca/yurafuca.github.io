@@ -21,7 +21,7 @@
 html {
   height: 100%;
 
-  background-image: url('https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/river.gif');
+  /* background-image: url('https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/river.gif'); */
   background-position: center center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -38,7 +38,7 @@ body {
   height: 100%;
   margin: 0;
 
-  background-image: url('https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/dot.png');
+  background-image: url('dot.png');
 }
 
 h1 {
@@ -55,6 +55,18 @@ a {
 
 a:hover {
   color: #777;
+}
+
+li {
+  padding: 2px 0;
+}
+
+li:first-child {
+  padding-top: 0;
+}
+
+li:last-child {
+  padding-bottom: 0;
 }
 
 section {
@@ -85,7 +97,7 @@ section {
   left: 10px;
   height: 100px;
   width: 100px;
-  background-image: url('https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/skip.png');
+  background-image: url('skip.png');
   background-size: contain;
   
   animation: sliein 3.0s;
@@ -108,4 +120,13 @@ section {
   top: 91px;
   /*left: 26px;*/
   left: 31px;
+}
+
+
+#wallpaper {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -10;
+  background: url(dot.png) no-repeat;
+  background-size: cover;
 }

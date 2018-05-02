@@ -1,41 +1,61 @@
-var base = 'https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/';
-// var base = '';
-var titles = [
-  'river',
-  'contact',
-  'cat',
-  // 'hope',
-  'drowsy',
-  'star',
-  'gong',
-  'creek',
-  // 'run'
-];
-var count = 0;
+// var base = 'https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/';
 
-$(document).ready(function(){
-  count = Math.floor(Math.random() * titles.length);
-  setResources();
+class Wallpaper {
+  constructor() {
+    this._items = [
+      'river',
+      'contact',
+      'cat',
+      'hope',
+      'chicken',
+      'drowsy',
+      'star',
+      'gong',
+      'creek',
+      'fan'
+    ];
+    this._count = Math.floor(Math.random() * this._items.length);
+  }
+
+  next() {
+    return this._count = (++this._count) % this._items.length;
+  }
+
+  current() {
+    return this._items[this._count];
+  }
+
+  length() {
+    return this._items.length;
+  }
+
+  count() {
+    return this._count;
+  }
+};
+
+const wallpaper = new Wallpaper();
+
+document.addEventListener("DOMContentLoaded", () => {
+  render();
+
+  //here code
 });
 
-$('#switch_wallpaper').on('click', function() {
-  skip();
+() => {}
+
+document.querySelector('#switch_wallpaper').addEventListener('click', () => {
+  wallpaper.next();
+  render();
 });
 
-function skip() {
-  count = (++count) % titles.length;
-  setResources();
-}
+const render = () => {
+  const wall = document.querySelector('#wallpaper');
+  const currentWallpaper = wallpaper.current();
+  wall.src = `./videos/${currentWallpaper}.webm`;
+  wall.play();
 
-function setResources() {
-  $('html').css({ 'background-image' : wallUrlText() });
-  $('#track').text(trackText());
-}
-
-function wallUrlText() {
-  return 'url("' + base + titles[count] + '.gif")'
-}
-
-function trackText() {
-  return (count + 1) + ' of ' + titles.length;
+  const track = document.querySelector('#track');
+  const trackText = `${wallpaper.count() + 1} of ${wallpaper.length()}`;
+  track.textContent = trackText;
 }

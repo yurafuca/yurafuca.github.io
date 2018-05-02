@@ -6,7 +6,7 @@ class Wallpaper {
       'river',
       'contact',
       'cat',
-      'hope',
+      // 'hope',
       'chicken',
       'drowsy',
       'star',

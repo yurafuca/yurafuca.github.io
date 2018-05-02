@@ -40,7 +40,6 @@
 
 html {
   height: 100%;
-  /* background-image: url('https://raw.githubusercontent.com/yurafuca/yurafuca.com/master/river.gif'); */
   background-position: center center;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -57,6 +56,9 @@ body {
   height: 100%;
   margin: 0;
   background-image: url('../images/dot.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -88,23 +90,12 @@ li:last-child {
 }
 
 section {
-  position: absolute;
   width: 280px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  /* Safari用 */
-  transform: translate(-50%, -50%);
   color: black;
   padding: 1px 21px 11px 21px;
   background-color: rgba(255, 255, 255, 1.0);
   animation: fadein 3.0s;
   -webkit-animation: fadein 3.0s;
-}
-
-#content {
-  height: 100%;
-  position: relative;
 }
 
 #switch_wallpaper {
@@ -130,9 +121,7 @@ section {
 
 #track {
   position: absolute;
-  /*top: 84px;*/
   top: 91px;
-  /*left: 26px;*/
   left: 31px;
 }
 

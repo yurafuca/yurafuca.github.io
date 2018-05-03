@@ -69,6 +69,51 @@ h2 {
   font-size: 1.5em;
 }
 
+h1,
+h2 {
+  position: relative;
+}
+
+.black {
+  background: black;
+  color: white;
+  left: -55px;
+  padding-left: 30px;
+  padding-bottom: 6px;
+  padding-top: 3px;
+  width: 308px;
+}
+
+.cyan {
+  background: #00ffff;
+  color: black;
+  left: 10px;
+  padding-left: 30px;
+  padding-bottom: 6px;
+  /* padding-top: 3px; */
+  width: 370px;
+}
+
+.pink {
+  background: #ff00ff;
+  color: white;
+  left: -100px;
+  padding-left: 30px;
+  /* padding-bottom: 6px; */
+  padding-top: 3px;
+  width: 230px;
+}
+
+.yellow {
+  background: yellow;
+  color: black;
+  left: -40px;
+  /* padding-left: 30px; */
+  padding-bottom: 6px;
+  padding-top: 3px;
+  width: 190px;
+}
+
 a {
   color: black;
 }

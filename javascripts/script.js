@@ -38,11 +38,7 @@ const wallpaper = new Wallpaper();
 
 document.addEventListener("DOMContentLoaded", () => {
   render();
-
-  //here code
 });
-
-() => {}
 
 document.querySelector('#switch_wallpaper').addEventListener('click', () => {
   wallpaper.next();
@@ -53,7 +49,6 @@ const render = () => {
   const wall = document.querySelector('#wallpaper');
   const currentWallpaper = wallpaper.current();
   wall.src = `./videos/${currentWallpaper}.webm`;
-  wall.play();
 
   const track = document.querySelector('#track');
   const trackText = `${wallpaper.count() + 1} of ${wallpaper.length()}`;

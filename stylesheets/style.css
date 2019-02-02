@@ -51,11 +51,11 @@ html {
 }
 
 body {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Zilla Slab", monospace;
   color: white;
+  background: white;
   height: 100%;
   margin: 0;
-  background-image: url("../images/dot.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,18 +64,15 @@ body {
 h1,
 h2 {
   position: relative;
-  left: -55px;
   cursor: default;
 }
 
 h1 {
   font-size: 2em;
-  color: white;
-  width: 285px;
-  padding-left: 10px;
-  left: -7px;
-  padding-bottom: 6px;
-  padding-top: 3px;
+  width: fit-content;
+  font-weight: bold;
+  font-family: "Zilla Slab";
+  margin-top: 0;
 }
 
 h2 {
@@ -86,36 +83,68 @@ h2 {
 }
 
 h1::before {
-  content: "#";
-  margin-right: 12px;
+  content: "://";
+  margin-right: 0px;
 }
 
-h2::before {
-  content: "##";
-  margin-right: 12px;
-}
-
-.black {
-  background: black;
+.black-back {
+  background:black;
   color: white;
 }
 
-.cyan {
-  background: #00ffff;
-  color: black;
+.cyan-back {
+  background: #00FFFF;
 }
 
-.pink {
-  background: #ff00ff;
-  color: white;
+.cyan-text {
+  color: #00FFFF;
 }
 
-.yellow {
-  background: yellow;
-  color: black;
+.pink-back {
+  background: #FA8CFF;
+}
+
+.pink-text {
+  color: #FA8CFF;
+}
+
+.yellow-back {
+  background: #FFEE00;
+}
+
+.yellow-text {
+  color: #FFEE00;
+}
+
+.elephant-letter {
+  padding-bottom: 2px;
+  display: inline-block;
+  line-height: 1.1em;
+}
+
+.elephant-letter.colored-back {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 3px;
+}
+
+.big-letter {
+  /* font-size: 1.1em; */
+  padding: 0 2px;
+  margin-right: 3px;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.0em;
+}
+
+.big-letter.colored-back {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 1px;
 }
 
 a {
+  text-decoration: none !important;
   color: black;
 }
 
@@ -123,7 +152,13 @@ a:hover {
   color: #777;
 }
 
+ul {
+  padding-inline-start: 0;
+  font-size: 1.15em;
+}
+
 li {
+  list-style: none;
   padding: 2px 0;
 }
 
@@ -182,4 +217,8 @@ section {
   z-index: -10;
   background: url(../images/dot.png) no-repeat;
   background-size: cover;
+}
+
+.at {
+  margin: 0 5px;
 }
